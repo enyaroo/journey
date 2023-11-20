@@ -15,7 +15,7 @@ public class UserController {
 	
 	@GetMapping("/sign-in-view")
 	public String signInView() {
-		return "";
+		return "user/signIn";
 	}
 	
 	@GetMapping("/main-view")
