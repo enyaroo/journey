@@ -7,6 +7,13 @@
 		<title>Insert title here</title>
 	</head>
 	<body>
-	
+		<div class="container">
+			<section>
+			
+			</section>
+			<footer class="d-flex justify-content-center align-items-center">
+				<div class="text-muted">Journey © 2023</div>
+			</footer>
+		</div>
 	</body>
 </html>

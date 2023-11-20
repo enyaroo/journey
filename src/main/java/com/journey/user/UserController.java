@@ -13,4 +13,14 @@ public class UserController {
 		return "";
 	}
 	
+	@GetMapping("/sign-in-view")
+	public String signInView() {
+		return "";
+	}
+	
+	@GetMapping("/main-view")
+	public String userMainView() {
+		return "";
+	}
+	
 }
