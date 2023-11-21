@@ -16,13 +16,19 @@
 	<body>
 		<div class="container">
 			<section>
-				<div class="w-50">
-					<form id="loginForm" action="/user/sign-in" method="post">
+				<div class="d-flex justify-content-center">
+					<div class="login-box w-50">
 						<h2>로그인</h2>
-						<h6>ID</h6>
-						<input type="text" class="form-control" id="loginId" name="loginId">
-						<h6>비밀번호</h6>
-					</form>
+						<form id="loginForm" action="/user/sign-in" method="post">
+							<h6>ID</h6>
+							<input type="text" class="form-control" id="loginId" name="loginId">
+							<h6>PASSWORD</h6>
+							<input type="password" class="form-control" id="password" name="password">
+							<input type="submit" id="loginBtn" class="btn btn-block" value="login">
+							<a href="#">암호를 잊으셨습니까?</a>
+							<a href="/user/sign-up-view">회원가입</a>
+						</form>
+					</div>				
 				</div>
 			</section>
 			<footer class="d-flex justify-content-center align-items-center">
