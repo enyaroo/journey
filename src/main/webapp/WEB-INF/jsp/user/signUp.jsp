@@ -66,7 +66,7 @@
 			.done(function(data) {
 				if (data.code == 200) {
 					alert("가입되었습니다. 로그인해주세요.")
-					location.href = "user/sign-in-view";
+					location.href = "/user/sign-in-view";
 				} else {
 					alert(data.errorMessage);
 				}
