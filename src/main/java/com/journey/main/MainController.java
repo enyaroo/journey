@@ -10,7 +10,7 @@ public class MainController {
 	
 	@GetMapping("/main-view")
 	public String mainView() {
-		return "home/main";
+		return "main/main";
 	}
 	
 }

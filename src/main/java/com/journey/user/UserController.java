@@ -23,4 +23,9 @@ public class UserController {
 		return "";
 	}
 	
+	@GetMapping("/game-list-view")
+	public String userGameListView() {
+		return "main/gameList";
+	}
+	
 }
