@@ -15,28 +15,19 @@
     </head>
 	<body>
 		<div class="container">
-			<div>Username님 오늘 게임은 어떠셨어요? Journal을 기록해 보세요.</div>
-			<form id="journalCreateForm" method="post" action="/journal/create">
+			<div>Pathfinder 추가하기</div>
+			<form id="pathfinderCreateForm" method="post" action="/pathfinder/create">
 				<input type="text" id="title" name="title" class="form-control" placeholder="제목을 입력하세요.">
-				<div class="d-flex justify-content-between">
-					<div class="small">GameName 플레이 시간 동안 N개의 screenshot이 생성되었습니다<br>Journal에 추가해 볼까요?</div>
-					<button class="btn btn-secondary">이미지 추가하기</button>
-				</div>
-				<div class="d-flex justify-content-between">
-					<div class="small">GameName 플레이 시간 동안 N개의 video가 생성되었습니다<br>Journal에 추가해 볼까요?</div>
-					<button class="btn btn-secondary">동영상 추가하기</button>
-				</div>
 				<textarea id="body" name="body" class="form-control" placeholder="내용을 입력하세요."></textarea>
 				<div>
 					<button class="btn btn-secondary">나가기</button>
-					<button type="submit" id="journalCreateBtn" class="btn btn-primary">저장하기</button>
+					<button type="submit" id="pathfinderCreateBtn" class="btn btn-primary">GameName 에 Pathfinder 추가하기</button>
 				</div>
 			</form>
 		</div>
-	
 	<script>
 	$(document).ready(function() {
-		$('#journalCreateForm').on('submit', function(e) {
+		$('#pathfinderCreateForm').on('submit', function(e) {
 			e.preventDefault();
 			
 			let title = $('#title').val();
@@ -48,14 +39,14 @@
 			$.post(url, params)
 			.done(function(data) {
 				if (data.code == 200) {
-					alert("journal이 저장되었습니다.");
-					location.href="/journal/journal-list-view"
+					alert("pathfinder가 저장되었습니다.")
+					location.href="/pathfinder/pathfinder-list-view"
 				} else {
 					alert(data.errorMessage);
 				}
 			});
 		});
 	});
-	</script>	
+	</script>
 	</body>
 </html>
