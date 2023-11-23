@@ -25,7 +25,7 @@ public class JournalController {
 	
 	@GetMapping("/journal-list-view")
 	public String journalListView(Model model) {
-		List<JournalEntity> journalList = journalBO.getJournalEntity();
+		List<JournalEntity> journalList = journalBO.getJournalList();
 		
 		model.addAttribute("journalList", journalList);
 		return "journal/journalList";

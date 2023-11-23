@@ -24,7 +24,7 @@ public class JournalBO {
 		return journalEntity == null ? null : journalEntity.getId();
 	}
 	
-	public List<JournalEntity> getJournalEntity() {
+	public List<JournalEntity> getJournalList() {
 		return journalRepository.findAll();
 	}
 }
